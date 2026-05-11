@@ -15,12 +15,4 @@
 | **AI/LLM** | LLM API integration, RAG architectures, Prompt engineering |
 
 ---
-
-### Getting Started
-1. Clone the repo.
-2. Install dependencies: `npm install`.
-3. Set up `.env.local` with your `GEMINI_API_KEY`.
-4. Run locally: `npm run dev`.
-
----
-**Links:** [GitHub](https://github.com/mustafa-codes-stuff) • [LinkedIn](https://linkedin.com/in/syedahmadmustafa) • syedahmadmustafa660@gmail.com
+**Links:** [Portfolio Website](https://mustafa-codes-stuff.vercel.app/) • [GitHub](https://github.com/mustafa-codes-stuff) • [LinkedIn](https://linkedin.com/in/syedahmadmustafa) • syedahmadmustafa660@gmail.com
