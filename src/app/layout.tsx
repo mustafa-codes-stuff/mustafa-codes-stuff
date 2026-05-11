@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Syed Ahmad Mustafa | Senior Software Engineer",
-  description: "Senior Full Stack Engineer with 5+ years of experience building and scaling high-impact systems.",
+  title: "Syed Ahmad Mustafa | Software Engineer",
+  description: "Full Stack Engineer with 5+ years of experience building and scaling high-impact systems.",
 };
 
 export default function RootLayout({

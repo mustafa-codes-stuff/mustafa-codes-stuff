@@ -1,12 +1,12 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Code2, Layout, Database, Cloud, Terminal, CheckCircle2 } from "lucide-react"
+import { Code, LayoutTemplate, Database, Cloud, Terminal, CircleCheck } from "lucide-react"
 
 const skillCategories = [
   {
     title: "Frontend",
-    icon: Layout,
+    icon: LayoutTemplate,
     skills: ["React", "Next.js", "Redux", "React Query", "Tailwind CSS", "Web Performance"]
   },
   {
@@ -16,7 +16,7 @@ const skillCategories = [
   },
   {
     title: "Testing & Tools",
-    icon: CheckCircle2,
+    icon: CircleCheck,
     skills: ["Playwright", "Jest", "React Testing Library", "Github", "JIRA", "Figma"]
   },
   {
@@ -31,7 +31,7 @@ const skillCategories = [
   },
   {
     title: "AI & Future Tech",
-    icon: Code2,
+    icon: Code,
     skills: ["LLM API integration", "RAG architectures", "Prompt engineering"]
   }
 ]

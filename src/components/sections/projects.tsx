@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Github, ExternalLink, Code2, Monitor, Search } from "lucide-react"
+import { Code, Monitor, Search } from "lucide-react"
 import Link from "next/link"
 
 const projects = [
@@ -9,7 +9,7 @@ const projects = [
     title: "AuthFlow",
     subtitle: "Scalable Authentication Playground",
     description: "Full-stack authentication system with login, MFA, session management, and LLM-based log analysis for failure diagnostics.",
-    icon: Code2,
+    icon: Code,
     tech: ["Next.js", "Node.js", "Redis", "PostgreSQL", "LLM API"],
     github: "https://github.com/mustafa-codes-stuff/authflow",
     color: "from-blue-500 to-indigo-500"
@@ -50,7 +50,8 @@ export function Projects() {
             target="_blank" 
             className="hidden md:flex items-center text-indigo-500 font-medium hover:underline gap-1"
           >
-            View all on Github <ExternalLink className="h-4 w-4" />
+            View all on Github 
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
           </Link>
         </div>
 
@@ -93,10 +94,12 @@ export function Projects() {
                     target="_blank"
                     className="flex items-center gap-2 text-sm font-semibold hover:text-indigo-500 transition-colors"
                   >
-                    <Github className="h-4 w-4" /> Code
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                    Code
                   </Link>
                   <button className="flex items-center gap-2 text-sm font-semibold text-muted-foreground cursor-not-allowed">
-                    <ExternalLink className="h-4 w-4" /> Live Demo
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                    Live Demo
                   </button>
                 </div>
               </div>
