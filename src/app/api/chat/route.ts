@@ -38,17 +38,16 @@ export async function POST(req: NextRequest) {
 
     const prompt = `${SYSTEM_PROMPT}\n\nUser Question: ${lastMessage}\n\nAssistant:`;
 
-    // Using direct fetch to v1 stable API to bypass SDK/v1beta issues
-    const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          contents: [{ parts: [{ text: prompt }] }]
-        })
-      }
-    );
+    // Using the exact model and endpoint from your verified cURL quickstart
+    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${apiKey}`;
+
+    const response = await fetch(apiUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        contents: [{ parts: [{ text: prompt }] }]
+      })
+    });
 
     const data = await response.json();
 

@@ -11,6 +11,7 @@ type Message = {
 
 export function Chatbot() {
   const [isOpen, setIsOpen] = React.useState(false)
+  const [showCallout, setShowCallout] = React.useState(false)
   const [messages, setMessages] = React.useState<Message[]>([
     { role: "assistant", content: "Hi! I'm Mustafa's AI assistant. How can I help you today?" }
   ])
@@ -26,6 +27,14 @@ export function Chatbot() {
     scrollToBottom()
   }, [messages])
 
+  // Callout effect on page load
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      if (!isOpen) setShowCallout(true)
+    }, 3000)
+    return () => clearTimeout(timer)
+  }, [isOpen])
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!input.trim() || isLoading) return
@@ -34,6 +43,7 @@ export function Chatbot() {
     setMessages(prev => [...prev, userMessage])
     setInput("")
     setIsLoading(true)
+    setShowCallout(false)
 
     try {
       const response = await fetch("/api/chat", {
@@ -141,18 +151,44 @@ export function Chatbot() {
         )}
       </AnimatePresence>
 
-      {/* Toggle Button */}
-      {!isOpen && (
+      <div className="relative">
+        <AnimatePresence>
+          {showCallout && !isOpen && (
+            <motion.div
+              initial={{ opacity: 0, x: 20, scale: 0.8 }}
+              animate={{ opacity: 1, x: 0, scale: 1 }}
+              exit={{ opacity: 0, x: 20, scale: 0.8 }}
+              className="absolute bottom-full right-0 mb-4 mr-2"
+            >
+              <div className="bg-indigo-600 text-white text-xs font-bold px-4 py-2 rounded-2xl shadow-xl whitespace-nowrap relative">
+                Ask me about Mustafa! 👋
+                <div className="absolute -bottom-1 right-6 w-3 h-3 bg-indigo-600 rotate-45" />
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          onClick={() => setIsOpen(true)}
+          initial={false}
+          animate={showCallout ? { y: [0, -5, 0] } : {}}
+          transition={{ duration: 2, repeat: Infinity }}
+          onClick={() => {
+            setIsOpen(true)
+            setShowCallout(false)
+          }}
           className="p-4 bg-indigo-500 text-white rounded-full shadow-2xl shadow-indigo-500/20 flex items-center justify-center group relative overflow-hidden"
         >
           <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-          <MessageSquare className="h-6 w-6 relative z-10" />
+          {isOpen ? <X className="h-6 w-6 relative z-10" /> : <MessageSquare className="h-6 w-6 relative z-10" />}
+          
+          {/* Animated ping effect when callout is shown */}
+          {showCallout && (
+            <span className="absolute inset-0 rounded-full bg-indigo-500 animate-ping opacity-20" />
+          )}
         </motion.button>
-      )}
+      </div>
     </div>
   )
 }

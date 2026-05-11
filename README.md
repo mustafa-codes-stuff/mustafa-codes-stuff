@@ -17,38 +17,6 @@ Full Stack Engineer specializing in frontend architecture, with strong proficien
 | **Testing** | Playwright, Jest, React Testing Library |
 | **AI/LLM** | LLM API integration, RAG architectures, Prompt engineering |
 
-## 💼 Work Experience
-
-### **Senior Software Engineer @ Eventbrite**
-*Oct 2023 – Apr 2026*
-- Led end-to-end development and global rollout of a scalable Authentication & MFA system for **89M+ monthly active users**.
-- Improved login success rate from **75% to 95%** by migrating to a modern, decoupled architecture.
-- Designed and scaled multi-factor identity systems for **1M+ global creators**.
-
-### **Software Engineer @ Binaryveda**
-*Mar 2023 – Sep 2023*
-- Developed SSR-based hospitality management tools using Next.js and Node.js.
-- Orchestrated complex state management for high-concurrency SaaS applications.
-
-### **Software Engineer @ Axess.ai**
-*Jan 2022 – Mar 2023*
-- Engineered event-driven notification systems using Webhooks and RabbitMQ.
-- Integrated geospatial features using Google Maps API for real-time asset tracking.
-
-### **Full Stack Engineer @ TopYa!**
-*Nov 2020 – Dec 2021*
-- Built end-to-end features for an EdTech platform, focusing on user engagement and analytics.
-
-## 🌟 Featured Projects
-
-- **AuthFlow**: A scalable authentication playground with LLM-powered log diagnostics.
-- **LogSense**: AI Log Analyser using structured prompts to retrieve root cause insights.
-- **Real-Time Monitoring**: WebSocket-based streaming dashboard with AI anomaly detection.
-
-## 🎓 Education
-- **B.Tech in Electronics & Communication Engineering**
-  Jamia Millia Islamia, New Delhi | **CPI: 9.3**
-
 ---
 
 ## 💻 About This Portfolio
