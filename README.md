@@ -3,9 +3,6 @@
 
 ---
 
-## 🚀 Professional Summary
-Full Stack Engineer specializing in frontend architecture, with strong proficiency in **React, Next.js, and TypeScript**, complemented by backend development in **Node.js, GraphQL, and AWS**. Contributed to large-scale applications serving tens of millions of users, including system design and scaling of authentication flows, performance optimization, and multi-factor identity systems. Currently building projects involving **LLM API integrations and RAG-based workflows**.
-
 ## 🛠 Technical Skillset
 
 | Category | Skills |
@@ -18,14 +15,6 @@ Full Stack Engineer specializing in frontend architecture, with strong proficien
 | **AI/LLM** | LLM API integration, RAG architectures, Prompt engineering |
 
 ---
-
-## 💻 About This Portfolio
-This portfolio is built with:
-- **Next.js 15+** (App Router)
-- **TypeScript**
-- **Tailwind CSS v4**
-- **Framer Motion** (Animations)
-- **Google Gemini API** (Integrated AI Chatbot)
 
 ### Getting Started
 1. Clone the repo.
